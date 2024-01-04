@@ -55,4 +55,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /home/ubuntu/
-            nohup sh lets-deploy.sh &
+            nohup sh lets-deploy.sh >/dev/null 2>&1 &
