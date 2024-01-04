@@ -38,14 +38,12 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.REMOTE_SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "./build/libs/modu-elec-0.0.1-SNAPSHOT.jar"
+          source: "./BE/modu-elec/build/libs/modu-elec-0.0.1-SNAPSHOT.jar"
           target: "/home/ubuntu"
 
       ## deploy to main
       - name: Deploy to main server
         uses: appleboy/ssh-action@master
-        id: deploy-main
-        if: contains(github.ref, 'main')
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
