@@ -26,7 +26,8 @@ jobs:
         ## gradle build
       - name: Build with Gradle
         run: |
-          cd ./BE/modu-elec/
+          cd ./BE/modu-elec
+          ls -al
           chmod +x gradlew
           gradlew clean build --exclude-task test
 
