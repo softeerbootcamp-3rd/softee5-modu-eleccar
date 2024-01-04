@@ -38,8 +38,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.REMOTE_SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "/BE/modu-elec/build/libs/modu-elec-0.0.1-SNAPSHOT.jar"
-          target: "/home/ubuntu"
+          source: "./BE/modu-elec/build/libs/modu-elec-0.0.1-SNAPSHOT.jar"
+          target: "/home/ubuntu/modu-elec-0.0.1-SNAPSHOT.jar"
 
       ## deploy to main
       - name: Deploy to main server
