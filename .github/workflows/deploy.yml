@@ -26,8 +26,9 @@ jobs:
         ## gradle build
       - name: Build with Gradle
         run: |
-          chmod +x ./BE/modu-elec/gradlew
-          ./BE/modu-elec/gradlew clean build --exclude-task test
+          cd ./BE/modu-elec/
+          chmod +x gradlew
+          gradlew clean build --exclude-task test
 
       - name: Send jar to main server with SCP
         uses: appleboy/scp-action@master
