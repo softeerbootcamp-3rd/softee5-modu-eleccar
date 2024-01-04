@@ -1,7 +1,7 @@
 name: deploy
 on:
   push:
-    branches: ['main']
+    branches: ['main','be/deploy/github-actions/johan1103']
 jobs:
   CI-CD:
     runs-on: ubuntu-latest
@@ -29,9 +29,15 @@ jobs:
           chmod +x ./gradlew
           ./gradlew clean build --exclude-task test
 
-      - name: Send jar to main server
-        run: |
-          scp /home/tester/temp/abc.txt root@xxx.xxx.xxx.xxx:/test
+      - name: Send jar to main server with SCP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.REMOTE_SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "./build/libs/modu-elec-0.0.1-SNAPSHOT.jar"
+          target: "/home/ubuntu"
 
       ## deploy to main
       - name: Deploy to main server
@@ -44,6 +50,5 @@ jobs:
           key: ${{ secrets.REMOTE_SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/ubuntu/artique-server-environment
-            echo ${{ secrets.DOCKER_TOKEN }} | sudo docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-            sudo sh lets-deploy.sh
+            cd /home/ubuntu/
+            sh lets-deploy.sh
