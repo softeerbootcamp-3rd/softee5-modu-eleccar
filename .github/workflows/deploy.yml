@@ -31,7 +31,8 @@ jobs:
           pwd
           chmod +x gradlew
           ./gradlew clean build --exclude-task test
-          cd ~
+          cd ..
+          cd ..
           cp ./BE/modu-elec/build/libs/modu-elec-0.0.1-SNAPSHOT.jar modu-elec-0.0.1-SNAPSHOT.jar
 
       - name: Send jar to main server with SCP
