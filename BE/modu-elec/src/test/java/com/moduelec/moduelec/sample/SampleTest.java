@@ -1,5 +1,7 @@
 package com.moduelec.moduelec.sample;
 
+import com.moduelec.moduelec.entity.Sample;
+import com.moduelec.moduelec.repository.SampleRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

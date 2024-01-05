@@ -1,4 +1,4 @@
-package com.moduelec.moduelec.sample;
+package com.moduelec.moduelec.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
