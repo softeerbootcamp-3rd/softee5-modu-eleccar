@@ -1,19 +1,19 @@
 package com.moduelec.moduelec.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
 @NoArgsConstructor
-public class User {
-
+public class EventHour {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String username;
+    @ManyToOne
+    ChargerInfo chargerInfo;
+    Integer startHour;
 
+    @ManyToOne
+    Event event;
 }

@@ -10,10 +10,15 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor
-public class User {
+public class ChargerInfo {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String username;
-
+    String address;
+    Double longitude;
+    Double latitude;
+    Integer startHour;
+    Integer endHour;
+    String type;
+    Integer pricePerHour;
 }
