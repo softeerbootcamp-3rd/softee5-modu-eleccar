@@ -26,21 +26,25 @@ public class ChargerInfoController {
         Optional<ChargerInfo> chargerInfoOptional = chargerInfoRepository.findById(id);
         if(chargerInfoOptional.isPresent()) {
             ChargerInfo chargerInfo = chargerInfoOptional.get();
-            return ResponseEntity.ok(ChargerDetailResponse.builder()
-                    .chargerInfoId(chargerInfo.getId())
-                    .pricePerHour(chargerInfo.getPricePerHour())
-                    .distance(distance)
-                    .startHour(chargerInfo.getStartHour())
-                    .endHour(chargerInfo.getEndHour())
-                    .housingType(chargerInfo.getHousingType())
-                    .chargerType(chargerInfo.getChargerType())
-                    .speed(chargerInfo.getSpeed())
-                    .installType(chargerInfo.getInstallType())
-                    .useType(chargerInfo.getUseType())
-                    .imageUrl(chargerInfo.getImageUrl())
-                    .build());
+            return ResponseEntity.ok(makeDto(distance, chargerInfo));
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
+    }
+
+    private static ChargerDetailResponse makeDto(double distance, ChargerInfo chargerInfo) {
+        return ChargerDetailResponse.builder()
+                .chargerInfoId(chargerInfo.getId())
+                .pricePerHour(chargerInfo.getPricePerHour())
+                .distance(distance)
+                .startHour(chargerInfo.getStartHour())
+                .endHour(chargerInfo.getEndHour())
+                .housingType(chargerInfo.getHousingType())
+                .chargerType(chargerInfo.getChargerType())
+                .speed(chargerInfo.getSpeed())
+                .installType(chargerInfo.getInstallType())
+                .useType(chargerInfo.getUseType())
+                .imageUrl(chargerInfo.getImageUrl())
+                .build();
     }
 }
