@@ -19,6 +19,11 @@ public class ChargerInfo {
     Double latitude;
     Integer startHour;
     Integer endHour;
-    String type;
+    String housingType;
+    String chargerType;
+    Integer speed;
+    String installType;
+    String useType;
+    String imageUrl;
     Integer pricePerHour;
 }

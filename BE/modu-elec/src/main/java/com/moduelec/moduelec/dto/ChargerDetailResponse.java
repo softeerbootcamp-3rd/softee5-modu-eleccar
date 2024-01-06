@@ -1,13 +1,15 @@
 package com.moduelec.moduelec.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public class ChargerInfoDto {
+@Builder
+public class ChargerDetailResponse {
     private Long chargerInfoId;
     private Integer pricePerHour;
     private Double distance;
