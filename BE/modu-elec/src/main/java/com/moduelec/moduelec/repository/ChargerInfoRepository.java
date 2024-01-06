@@ -1,17 +1,12 @@
 package com.moduelec.moduelec.repository;
 
-import com.moduelec.moduelec.dto.ChargerList;
 import com.moduelec.moduelec.dto.ChargerResponseInterface;
 import com.moduelec.moduelec.entity.ChargerInfo;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-
-import static com.moduelec.moduelec.dto.ChargerList.*;
 
 public interface ChargerInfoRepository extends JpaRepository<ChargerInfo,Long> {
   @Query(value = "SELECT c.id as chargerInfoId, c.type as type, " +
