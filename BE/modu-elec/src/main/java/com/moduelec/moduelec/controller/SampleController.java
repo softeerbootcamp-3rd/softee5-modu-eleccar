@@ -1,5 +1,7 @@
-package com.moduelec.moduelec.sample;
+package com.moduelec.moduelec.controller;
 
+import com.moduelec.moduelec.entity.Sample;
+import com.moduelec.moduelec.repository.SampleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
