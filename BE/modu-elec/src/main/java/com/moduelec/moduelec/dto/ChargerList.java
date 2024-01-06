@@ -11,11 +11,12 @@ public class ChargerList {
   @AllArgsConstructor
   @Getter
   public static class ChargerListResponse{
-    private int page;
-    private int size;
-    private boolean hasNext;
     private int totalSize;
     private List<ChargerResponse> chargers;
+
+    public static ChargerListResponse of(List<ChargerResponse> chargers){
+      return new ChargerListResponse(chargers.size(),chargers);
+    }
   }
 
   @NoArgsConstructor
@@ -29,5 +30,10 @@ public class ChargerList {
     private Integer pricePerHour;
     private Integer startHour;
     private Integer endHour;
+
+    public static ChargerResponse of(ChargerResponseInterface c){
+      return new ChargerResponse(c.getChargerInfoId(),null,c.getType(),c.getDistance(),c.getPricePerHour(),
+              c.getStartHour(),c.getEndHour());
+    }
   }
 }
