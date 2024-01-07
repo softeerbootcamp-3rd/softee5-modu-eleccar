@@ -1,5 +1,4 @@
 package com.moduelec.moduelec.repository;
-
 import com.moduelec.moduelec.dto.ChargerResponseInterface;
 import com.moduelec.moduelec.entity.ChargerInfo;
 import org.springframework.data.jpa.repository.JpaRepository;

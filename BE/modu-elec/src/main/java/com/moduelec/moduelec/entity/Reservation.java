@@ -17,8 +17,6 @@ public class Reservation {
 
     @ManyToOne
     User user;
-    @ManyToOne
-    ChargerInfo chargerInfo;
     @OneToOne
     Event event;
 }
