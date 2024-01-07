@@ -1,5 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ModuElecCar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
 
-    <style name="Theme.ModuElecCar" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.ModuElecCar" parent="Base.Theme.ModuElecCar">
+        <item name="android:fontFamily">@font/spoqahansneo</item>
+        <item name="colorPrimary">@color/main_400</item>
+        <item name="android:windowBackground">@color/gray_000</item>
+        <item name="android:statusBarColor">@color/gray_000</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.72</item>
+    </style>
+
+
 </resources>

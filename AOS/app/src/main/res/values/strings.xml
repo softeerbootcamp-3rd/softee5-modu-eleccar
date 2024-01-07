@@ -1,3 +1,63 @@
 <resources>
     <string name="app_name">Modu Elec Car</string>
+    <string name="main_search_place">장소를 검색해보세요!</string>
+    <string name="main_enable_list">현재 충전 가능한 곳만</string>
+    <string name="main_dc_car">DC차 데모</string>
+    <string name="choose_time">충전을 원하는 시작 시간과\n종료 시간을 선택해주세요</string>
+    <string name="common_back1">돌아가기</string>
+    <string name="common_back2">뒤로 가기</string>
+    <string name="apply_reserve">예약 신청</string>
+    <string name="apply">신청</string>
+    <string name="available_time">대여가능시간</string>
+    <string name="per_hour">시간 당</string>
+    <string name="complete_payment">결제를 완료했어요!</string>
+    <string name="required_info">이제 충전기 이용에 필요한\n 정보를 볼 수 있어요!</string>
+    <string name="confirm_use_info">충전기 이용 정보 확인</string>
+    <string name="send_request">카밥 주인에게\n예약 신청을 보냈어요!</string>
+    <string name="receive_request">카밥 주인이\n대여를 수락했어요!</string>
+    <string name="initial_screen">처음화면</string>
+    <string name="send_request_phrase1">화면을 이탈해도 예약이 취소되지 않아요</string>
+    <string name="send_request_phrase2">카밥 주인이 수락하면\n충전기 이용 정보를 볼 수 있어요</string>
+    <string name="send_request_phrase3">충전기 이용 정보를 왜 알아야하나요?</string>
+    <string name="common_cancel">취소하기</string>
+    <string name="station_use_info">충전기 이용 정보</string>
+    <string name="station_addr">충전소 위치</string>
+    <string name="station_avail_time">충전가능시간</string>
+    <string name="distance_info">내 위치에서 1.7km</string>
+    <string name="station_detail_info">충전기 상세 정보</string>
+    <string name="adapter_type">충전기 타입</string>
+    <string name="install_type">설치 형태</string>
+    <string name="rental_price">대여 가격</string>
+    <string name="remarks">특이사항</string>
+    <string name="notification">안내사항</string>
+    <string name="noti_phrase1">충전기를 훼손할 경우 해당 책임은 사용자 본인에게 있습니다.</string>
+    <string name="noti_phrase2">충전소에서의 도난, 분실, 사고는 일체 책임지지 않습니다.</string>
+    <string name="picture">사진</string>
+    <string name="request_confirm_message">카밥 주인에게\n예약 신청을 보낼까요?</string>
+    <string name="reserve_time">예약 시간</string>
+    <string name="average_time_message">평균 2분 정도 걸려요\n조금만 기다려 주세요</string>
+    <string name="cancel_apply">신청 취소하기</string>
+    <string name="cancel_rent">대여 취소하기</string>
+    <string name="station_location">충전기 위치</string>
+    <string name="expected_charge">예상 충전량</string>
+    <string name="payment_phrase">대여비를\n결제할게요</string>
+    <string name="payment_type">결제 수단</string>
+    <string name="reservation_info">카밥 예약 정보</string>
+    <string name="seller_message_phrase">카밥 주인의 메세지</string>
+    <string name="seller_message">제가 지금 집에 없어서 남편에게 말해두었으니 현관벨 누르시면 카드 드릴게요 그리고 외진 곳이라... 아마 오시는 길이 많이 어려울 거예요. 혹시 위치 헷갈리심 챗 주셔도 괜찮습니다</string>
+    <string name="question_meesage">악성 정보인가요?</string>
+    <string name="attached_picture_phrase">첨부 사진 2장</string>
+    <string name="chat_phrase">카밥 주인과 채팅하기</string>
+    <string name="review_phrase">사용 후기</string>
+    <string name="register_phrase1">내 카밥을 다른 사람에게\n유료로 공유할 수 있어요!</string>
+    <string name="register_phrase2">카밥은 개인(비공용) 전기차\n충전기를 의미해요</string>
+    <string name="register_phrase3">개인 충전기를 타인에게 유료 대여할 수 있나요?</string>
+    <string name="register_step1">내 카밥이 공유\n가능한지 확인해요</string>
+    <string name="register_step2">내 카밥 정보를\n입력해요</string>
+    <string name="register_step3">공유를 원하는\n시간을 선택해요</string>
+    <string name="register_btn_message">카밥 공유하러 가기</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

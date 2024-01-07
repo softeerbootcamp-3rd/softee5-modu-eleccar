@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="20dp"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/tv_request_confirm_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/spoqahansansneobold"
+        android:text="@string/request_confirm_message"
+        android:textAlignment="center"
+        android:textColor="@color/gray_700"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_reserve_time_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_request_confirm_message">
+
+        <TextView
+            android:id="@+id/tv_reserve_time_phrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="@string/reserve_time"
+            android:textColor="@color/gray_400"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_reserve_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="12:00"
+            android:textColor="@color/gray_600"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="-"
+            android:textColor="@color/gray_600" />
+
+        <TextView
+            android:id="@+id/tv_reserve_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="18:00"
+            android:textColor="@color/gray_600" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="@color/gray_100"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="6시간"
+            android:textColor="@color/main_400"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+
+        app:layout_constraintTop_toBottomOf="@id/ll_reserve_time_info">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_8dp"
+            android:fontFamily="@font/spoqahansansneoregular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="@string/common_back2"
+            android:textColor="@color/gray_600"
+            android:textSize="14dp"
+            app:backgroundTint="@color/gray_050" />
+
+        <Button
+            android:id="@+id/btn_apply_reservation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_8dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="@string/apply"
+
+            android:textColor="@color/gray_000"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

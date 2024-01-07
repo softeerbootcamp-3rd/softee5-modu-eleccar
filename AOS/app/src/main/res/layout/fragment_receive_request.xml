@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SendRequestFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/gray_000"
+            android:fontFamily="@font/spoqahansansneomedium"
+            android:src="@drawable/icon_arrow_left_small_mono"
+            android:textColor="@color/gray_600"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/gray_600" />
+
+
+        <ImageButton
+            android:id="@+id/ib_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="14dp"
+            android:backgroundTint="@color/gray_000"
+            android:fontFamily="@font/spoqahansansneomedium"
+            android:src="@drawable/icon_x_mono"
+            android:textColor="@color/gray_600"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_receive_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:lines="2"
+            android:text="@string/receive_request"
+            android:textColor="@color/gray_700"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ib_back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="@color/gray_050"
+            android:orientation="vertical"
+            android:paddingHorizontal="26dp"
+            android:paddingVertical="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_reserve_time_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/reserve_time"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_reserve_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="12:00 - 18:00, 총 6시간"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_station_location_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/station_location"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_station_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="NNN도 NNN군 NN시 123-56"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_expected_charge_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/expected_charge"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_expected_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="2520kwh"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_rental_price_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/rental_price"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_rental_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="8,000원"
+                    android:textColor="@color/main_400"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/radius_8dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="8,000원 결제하기"
+            android:textColor="@color/gray_000"
+            android:textSize="16dp"
+            app:backgroundTint="@color/main_400"
+            app:layout_constraintBottom_toTopOf="@id/btn_cancel_rental" />
+
+        <Button
+            android:id="@+id/btn_cancel_rental"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/radius_8dp"
+            android:fontFamily="@font/spoqahansansneoregular"
+            android:text="@string/cancel_rent"
+            android:textColor="@color/gray_700"
+            android:textSize="16dp"
+            app:backgroundTint="@color/gray_050"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
