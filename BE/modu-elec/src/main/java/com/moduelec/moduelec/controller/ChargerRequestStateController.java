@@ -1,5 +1,6 @@
-package com.moduelec.moduelec.dto;
+package com.moduelec.moduelec.controller;
 
+import com.moduelec.moduelec.dto.ChargerRequestState;
 import com.moduelec.moduelec.service.ChargerRequestStateService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
