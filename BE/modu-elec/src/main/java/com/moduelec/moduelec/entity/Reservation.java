@@ -15,4 +15,7 @@ public class Reservation {
 
     @ManyToOne
     User user;
+
+    @OneToOne
+    Event event;
 }
