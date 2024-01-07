@@ -16,5 +16,8 @@ public class Event {
     @ManyToOne
     User user;
 
+    @OneToOne
+    Reservation reservation;
+
     LocalDateTime createdAt;
 }
