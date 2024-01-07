@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StationDetailInfoFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:layout_marginStart="14dp"
+            android:backgroundTint="@color/gray_000"
+            android:padding="0dp"
+            android:src="@drawable/icon_arrow_left_small_mono"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/gray_600" />
+
+        <ImageButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:layout_marginEnd="14dp"
+            android:backgroundTint="@color/gray_000"
+            android:padding="0dp"
+            android:src="@drawable/icon_x_mono"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/gray_600" />
+
+        <ImageView
+            android:id="@+id/iv_car_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/car"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+        <ImageButton
+            android:id="@+id/btn_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="14dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_link_mono"
+            app:layout_constraintBottom_toBottomOf="@id/iv_car_img"
+            app:layout_constraintEnd_toStartOf="@id/btn_star" />
+
+        <ImageButton
+            android:id="@+id/btn_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="14dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_star_mono"
+            app:layout_constraintBottom_toBottomOf="@id/iv_car_img"
+            app:layout_constraintEnd_toEndOf="@id/iv_car_img" />
+
+        <TextView
+            android:id="@+id/tv_station_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="7kWh 충전가능"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_car_img" />
+
+        <TextView
+            android:id="@+id/tv_elec_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="@color/gray_100"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="7kW"
+            android:textColor="@color/gray_400"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_station_title"
+            app:layout_constraintEnd_toStartOf="@id/tv_is_available"
+            app:layout_constraintTop_toTopOf="@id/tv_station_title" />
+
+        <TextView
+            android:id="@+id/tv_is_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="@color/gray_100"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="지금 가능"
+            android:textColor="@color/main_400"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_elec_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_elec_amount" />
+
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/spoqahansansneomedium"
+            android:text="@string/distance_info"
+            android:textColor="@color/gray_300"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_station_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_station_info_phrase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_distance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_station_addr_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/station_addr"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/station_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="서울특별시 강남구 논현동 58-3"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_station_avail_time_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/station_avail_time"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_station_avail_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="09:00 - 18:00"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_rental_price_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/rental_price"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_rental_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="100원/kwh"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_view1"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/gray_050"
+            app:layout_constraintTop_toBottomOf="@id/ll_station_info_phrase" />
+
+        <LinearLayout
+            android:id="@+id/ll_station_detail_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/line_view1">
+
+
+            <TextView
+                android:id="@+id/tv_station_detail_info_phrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:text="@string/station_detail_info"
+                android:textColor="@color/gray_700"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_adapter_type_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/adapter_type"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_adapter_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="31dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="완속, 7kW"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_install_type_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/install_type"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_install_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="실외 스탠드형"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_remarks_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/remarks"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_remarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="44dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="RFID 카드키 인식으로 사용"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line_view2"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="17dp"
+            android:background="@color/gray_050"
+            app:layout_constraintBottom_toTopOf="@id/ll_notification" />
+
+        <LinearLayout
+            android:id="@+id/ll_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_apply_reservation">
+
+            <TextView
+                android:id="@+id/tv_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:text="@string/notification"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_remarks_phrase" />
+
+
+            <TextView
+                android:id="@+id/tv_noti_phrase1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:drawableStart="@drawable/icon_exclamation_circle_mono"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/spoqahansansneoregular"
+                android:text="@string/noti_phrase1"
+                android:textColor="@color/gray_400"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_noti_phrase2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:drawableStart="@drawable/icon_exclamation_circle_mono"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/spoqahansansneoregular"
+                android:text="@string/noti_phrase2"
+                android:textColor="@color/gray_400"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/ll_station_detail_info">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:text="@string/review_phrase"
+                android:textColor="@color/gray_700"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/radius_8dp"
+                    android:backgroundTint="@color/gray_050"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="합리적인 가격" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/radius_8dp"
+                    android:backgroundTint="@color/gray_050"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="빠른 수락" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/radius_8dp"
+                    android:backgroundTint="@color/gray_050"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="주차공간 넓음" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_apply_reservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/radius_8dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="@string/apply_reserve"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

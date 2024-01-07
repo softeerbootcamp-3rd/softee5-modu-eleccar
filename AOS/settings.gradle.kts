@@ -10,9 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven("https://naver.jfrog.io/artifactory/maven/")
     }
 }
 
 rootProject.name = "Modu Elec Car"
 include(":app")
- 
