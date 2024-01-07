@@ -1,12 +1,14 @@
 package com.moduelec.moduelec.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Reservation {
 
     @Id
@@ -15,4 +17,8 @@ public class Reservation {
 
     @ManyToOne
     User user;
+    @ManyToOne
+    ChargerInfo chargerInfo;
+    @OneToOne
+    Event event;
 }

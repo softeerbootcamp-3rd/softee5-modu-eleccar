@@ -20,11 +20,14 @@ public class ChargerController {
     return chargerListService.searchByDistance(longitude,latitude);
   }
   @PostMapping("/charger/reservation")
-  public Boolean makeReservation(@RequestParam(value = "startHour") Integer startHour,
+  public Long makeReservation(@RequestParam(value = "startHour") Integer startHour,
                                  @RequestParam(value = "chargerInfoId") Long chargerInfoId,
                                  @RequestParam(value = "chargeDuration") Integer chargeDuration,
                                  @RequestParam(value = "userId") Long userId){
-    chargerReservationService.createEvent(startHour,chargeDuration,userId,chargerInfoId);
-    return true;
+    return chargerReservationService.createEvent(startHour,chargeDuration,userId,chargerInfoId);
+  }
+  @PostMapping("/charger/reservation/confirm")
+  public Boolean confirm(@RequestParam(value = "accept")Boolean accept){
+
   }
 }

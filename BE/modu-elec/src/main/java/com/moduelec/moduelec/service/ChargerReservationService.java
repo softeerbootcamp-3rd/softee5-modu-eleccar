@@ -1,13 +1,7 @@
 package com.moduelec.moduelec.service;
 
-import com.moduelec.moduelec.entity.ChargerInfo;
-import com.moduelec.moduelec.entity.Event;
-import com.moduelec.moduelec.entity.EventHour;
-import com.moduelec.moduelec.entity.User;
-import com.moduelec.moduelec.repository.ChargerInfoRepository;
-import com.moduelec.moduelec.repository.EventHourRepository;
-import com.moduelec.moduelec.repository.EventRepository;
-import com.moduelec.moduelec.repository.UserRepository;
+import com.moduelec.moduelec.entity.*;
+import com.moduelec.moduelec.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,9 +17,10 @@ public class ChargerReservationService {
   private final EventHourRepository eventHourRepository;
   private final UserRepository userRepository;
   private final ChargerInfoRepository chargerInfoRepository;
+  private final ReservationRepository reservationRepository;
 
   @Transactional
-  public void createEvent(int startHour, int duration, Long userId, Long chargerInfoId){
+  public Long createEvent(int startHour, int duration, Long userId, Long chargerInfoId){
     User user = userRepository.findById(userId).orElseThrow(()->new RuntimeException("invalid user id ["+userId+"]"));
     ChargerInfo chargerInfo = chargerInfoRepository
             .findById(chargerInfoId).orElseThrow(()->new RuntimeException("invalid charger info id ["+chargerInfoId+"]"));
@@ -37,5 +32,12 @@ public class ChargerReservationService {
       eventHours.add(new EventHour(null,chargerInfo,startHour+i,event));
     }
     eventHourRepository.saveAll(eventHours);
+    return event.getId();
+  }
+
+  @Transactional
+  public void acceptEvent(Long eventId){
+    Event acceptedEvent = eventRepository.findById(eventId)
+            .orElseThrow(()->new RuntimeException("invalid event id ["+eventId+"]"));
   }
 }
