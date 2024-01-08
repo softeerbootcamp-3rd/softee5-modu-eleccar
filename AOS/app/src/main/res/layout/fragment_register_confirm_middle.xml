@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RegisterDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="14dp">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_layout" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/radius_7dp"
+            android:backgroundTint="@color/gray_100"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_marginVertical="8dp"
+                android:layout_weight="10"
+                android:background="@drawable/radius_7dp"
+                android:backgroundTint="@color/main_400" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_register_detail_phrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="@string/register_confirm_middle"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <TextView
+            android:id="@+id/tv_condition_check_phrase2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:drawablePadding="2dp"
+            android:drawableTint="@color/gray_600"
+            android:text="@string/register_confirm_middle_phrase"
+            android:textColor="@color/gray_700"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register_detail_phrase" />
+
+
+        <Button
+            android:id="@+id/btn_confirm_station_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/radius_8dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:paddingHorizontal="28dp"
+            android:paddingVertical="16dp"
+            android:text="@string/register_share_time_now"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_confirm_station_info2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_confirm_station_info2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="14dp"
+            app:backgroundTint="@color/gray_050"
+            android:background="@drawable/radius_8dp"
+            android:fontFamily="@font/spoqahansansneoregular"
+            android:paddingHorizontal="28dp"
+            android:paddingVertical="16dp"
+            android:text="@string/register_share_time_later"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
