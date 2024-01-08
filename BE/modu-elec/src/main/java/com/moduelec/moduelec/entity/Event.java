@@ -17,6 +17,10 @@ public class Event {
     Long id;
     @ManyToOne
     User user;
+  
+    @OneToOne(mappedBy = "event")
+    Reservation reservation;
+  
     LocalDateTime createdAt;
     @OneToMany(mappedBy = "event")
     List<EventHour> eventHours;
