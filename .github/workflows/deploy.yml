@@ -1,7 +1,7 @@
 name: deploy
 on:
   push:
-    branches: ['main','be/deploy/github-actions/johan1103']
+    branches: ['main','Backend']
 jobs:
   CI-CD:
     runs-on: ubuntu-latest
