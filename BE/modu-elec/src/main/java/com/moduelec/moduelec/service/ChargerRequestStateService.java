@@ -1,22 +1,25 @@
 package com.moduelec.moduelec.service;
 
-import com.moduelec.moduelec.dto.ChargerRequestState;
-import com.moduelec.moduelec.entity.Event;
+import com.moduelec.moduelec.dto.ChargerRequestStateDto;
 import com.moduelec.moduelec.repository.EventRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class ChargerRequestStateService {
     private final EventRepository eventRepository;
 
-    public ChargerRequestState getChargerRequestState(Long id) {
-        return eventRepository.findById(id)
-                .map(event -> event.getReservation() == null ?
-                        ChargerRequestState.PENDING : ChargerRequestState.ACCEPTED)
-                .orElse(ChargerRequestState.DENIED);
+    public ChargerRequestStateDto getChargerRequestState(Long id) {
+        String state = eventRepository.findById(id)
+                .map(event -> event.getReservation() == null ? "PENDING" : "ACCEPTED")
+                .orElse("DENIED");
+
+        ChargerRequestStateDto dto = new ChargerRequestStateDto();
+        dto.setChargerRequestState(state);
+        if (state.equals("ACCEPTED")) {
+            dto.setEventId(id);
+        }
+        return dto;
     }
 }

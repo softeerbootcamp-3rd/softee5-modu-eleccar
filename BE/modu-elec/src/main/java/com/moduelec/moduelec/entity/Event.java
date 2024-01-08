@@ -16,7 +16,7 @@ public class Event {
     @ManyToOne
     User user;
 
-    @OneToOne
+    @OneToOne(mappedBy = "event")
     Reservation reservation;
 
     LocalDateTime createdAt;
