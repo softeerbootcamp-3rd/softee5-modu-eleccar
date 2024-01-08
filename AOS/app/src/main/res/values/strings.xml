@@ -69,9 +69,13 @@
     <string name="register_location_next">다음</string>
     <string name="register_location_phrase2">핀을 움직여 충전기의 위치를 정할 수 있어요</string>
     <string name="register_detail_phrase">내 카밥 정보를\n입력해주세요</string>
+    <string name="register_price_phrase">충전 대여 요금을\n책정해주세요</string>
     <string name="register_detail_title">대여글 제목</string>
+    <string name="register_price_unit">1kWh 당</string>
     <string name="register_detail_edit_text">입력하세요 (30자 이내)</string>
+    <string name="register_price_edit_text">입력하기</string>
     <string name="register_detail_type">충전기 타입</string>
+    <string name="register_price_description">❓충전기 별 전기세 측정 방법</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
