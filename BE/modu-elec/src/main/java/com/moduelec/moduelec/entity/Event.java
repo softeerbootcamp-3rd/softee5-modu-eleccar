@@ -26,6 +26,6 @@ public class Event {
     List<EventHour> eventHours;
 
     public static Event create(User user){
-        return new Event(null,user,LocalDateTime.now(),null);
+        return new Event(null,user,null,LocalDateTime.now(),null);
     }
 }
