@@ -1,12 +1,14 @@
 package com.moduelec.moduelec.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class ChargerInfo {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
