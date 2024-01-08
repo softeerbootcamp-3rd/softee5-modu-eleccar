@@ -70,6 +70,8 @@
     <string name="register_location_phrase2">핀을 움직여 충전기의 위치를 정할 수 있어요</string>
     <string name="register_detail_phrase">내 카밥 정보를\n입력해주세요</string>
     <string name="register_price_phrase">충전 대여 요금을\n책정해주세요</string>
+    <string name="register_selling_date_title">내 카밥을 공유하고 싶은\n요일과 시간을 설정해주세요</string>
+    <string name="register_selling_date_phrase">공유 요일 및 시간</string>
     <string name="register_detail_title">대여글 제목</string>
     <string name="register_price_unit">1kWh 당</string>
     <string name="register_detail_edit_text">입력하세요 (30자 이내)</string>
