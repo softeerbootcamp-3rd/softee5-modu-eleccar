@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RegisterDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="14dp">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_layout" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/radius_7dp"
+            android:backgroundTint="@color/gray_100"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_marginVertical="8dp"
+                android:layout_weight="2"
+                android:background="@drawable/radius_7dp"
+                android:backgroundTint="@color/main_400" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_register_detail_phrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="@string/register_detail_phrase"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_register_detail_phrase">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:text="@string/register_detail_title"
+                android:textColor="@color/gray_600"
+                android:textSize="18dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_search_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textColorHint="@color/gray_200">
+
+                <EditText
+                    android:id="@+id/et_search_addr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radius_8dp"
+                    android:backgroundTint="@color/gray_050"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:hint="@string/register_detail_edit_text"
+                    android:paddingVertical="7dp"
+                    android:textSize="14dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/ll_title">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:text="@string/register_detail_type"
+                android:textColor="@color/gray_600"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

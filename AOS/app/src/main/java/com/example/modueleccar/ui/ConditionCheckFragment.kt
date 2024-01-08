@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.modueleccar.R
-import com.example.modueleccar.databinding.FragmentRegisterBinding
+import com.example.modueleccar.databinding.FragmentConditionCheckBinding
 
 
-class RegisterFragment : Fragment() {
-    private lateinit var _binding: FragmentRegisterBinding
+class ConditionCheckFragment : Fragment() {
+    private lateinit var _binding: FragmentConditionCheckBinding
     private val binding
         get() = _binding
 
@@ -20,13 +20,12 @@ class RegisterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+        _binding = FragmentConditionCheckBinding.inflate(inflater, container, false)
 
-        binding.btnRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_registerFragment_to_conditionCheckFragment)
+        binding.btnNext.setOnClickListener {
+            findNavController().navigate(R.id.action_conditionCheckFragment_to_registerLocationFragment)
         }
         return binding.root
     }
-
 
 }

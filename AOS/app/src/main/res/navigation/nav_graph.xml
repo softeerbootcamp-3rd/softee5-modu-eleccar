@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/completePaymentFragment"
-        android:name="com.example.modueleccar.CompletePaymentFragment"
+        android:name="com.example.modueleccar.ui.CompletePaymentFragment"
         android:label="CompletePaymentFragment" >
         <action
             android:id="@+id/action_completePaymentFragment_to_useDescriptionFragment"
@@ -78,5 +78,23 @@
         android:id="@+id/registerFragment"
         android:name="com.example.modueleccar.ui.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_conditionCheckFragment"
+            app:destination="@id/conditionCheckFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conditionCheckFragment"
+        android:name="com.example.modueleccar.ui.ConditionCheckFragment"
+        android:label="fragment_condition_check"
+        tools:layout="@layout/fragment_condition_check" >
+        <action
+            android:id="@+id/action_conditionCheckFragment_to_registerLocationFragment"
+            app:destination="@id/registerLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerLocationFragment"
+        android:name="com.example.modueleccar.ui.RegisterLocationFragment"
+        android:label="fragment_register_location"
+        tools:layout="@layout/fragment_register_location" />
 </navigation>

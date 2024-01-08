@@ -8,7 +8,7 @@
     <string name="common_back2">뒤로 가기</string>
     <string name="apply_reserve">예약 신청</string>
     <string name="apply">신청</string>
-    <string name="available_time">대여가능시간</string>
+    <string name="available_time">충전가능시간</string>
     <string name="per_hour">시간 당</string>
     <string name="complete_payment">결제를 완료했어요!</string>
     <string name="required_info">이제 충전기 이용에 필요한\n 정보를 볼 수 있어요!</string>
@@ -56,7 +56,22 @@
     <string name="register_step2">내 카밥 정보를\n입력해요</string>
     <string name="register_step3">공유를 원하는\n시간을 선택해요</string>
     <string name="register_btn_message">카밥 공유하러 가기</string>
-
+    <string name="condition_check_phrase1">내 카밥이 공유 조건을\n만족하는지 확인해주세요</string>
+    <string name="condition_check_phrase2">공유 필수 조건이 뭔가요?</string>
+    <string name="condition_first">외부인이 주차 가능한 곳인가요?</string>
+    <string name="condition_second">지정 주차면이 있나요?</string>
+    <string name="condition_check_yes">가능해요</string>
+    <string name="condition_check_no">아니요</string>
+    <string name="condition_check_next">다음</string>
+    <string name="warning_message1">외부인이 주차가 가능해야 등록이 가능합니다.</string>
+    <string name="register_location_phrase1">내 카밥의 위치를\n알려주세요</string>
+    <string name="current_location">현재 위치로 설정</string>
+    <string name="register_location_next">다음</string>
+    <string name="register_location_phrase2">핀을 움직여 충전기의 위치를 정할 수 있어요</string>
+    <string name="register_detail_phrase">내 카밥 정보를\n입력해주세요</string>
+    <string name="register_detail_title">대여글 제목</string>
+    <string name="register_detail_edit_text">입력하세요 (30자 이내)</string>
+    <string name="register_detail_type">충전기 타입</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

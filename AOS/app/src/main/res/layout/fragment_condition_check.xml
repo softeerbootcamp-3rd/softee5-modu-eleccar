@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ConditionCheckFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="14dp">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_layout" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/radius_7dp"
+            android:backgroundTint="@color/gray_100"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <TextView
+            android:id="@+id/tv_condition_check_phrase1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="@string/condition_check_phrase1"
+            android:textColor="@color/gray_700"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <TextView
+            android:id="@+id/tv_condition_check_phrase2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:drawableStart="@drawable/icon_question_circle_mono"
+            android:drawablePadding="2dp"
+            android:drawableTint="@color/gray_300"
+            android:text="@string/condition_check_phrase2"
+            android:textColor="@color/gray_400"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_condition_check_phrase1" />
+
+        <TextView
+            android:id="@+id/tv_condition_check_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="@string/condition_first"
+            android:textColor="@color/gray_600"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_condition_check_phrase2" />
+
+        <LinearLayout
+            android:id="@+id/ll_condition_check_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_condition_check_first">
+
+            <Button
+                android:id="@+id/btn_first_condition_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_8dp"
+                android:fontFamily="@font/spoqahansansneoregular"
+                android:paddingVertical="10dp"
+                android:text="@string/condition_check_no"
+                android:textColor="@color/gray_700"
+                app:backgroundTint="@color/gray_050" />
+
+            <Button
+                android:id="@+id/btn_first_condition_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_8dp"
+                android:fontFamily="@font/spoqahansansneoregular"
+                android:paddingVertical="10dp"
+                android:text="@string/condition_check_yes"
+                android:textColor="@color/gray_700"
+                app:backgroundTint="@color/gray_050" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_warning_message1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/warning_message1"
+            android:drawableStart="@drawable/icon_warning_triangle_mono"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/error"
+            android:drawablePadding="2dp"
+            android:fontFamily="@font/spoqahansansneoregular"
+            app:layout_constraintTop_toBottomOf="@id/ll_condition_check_first"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/tv_condition_check_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="@string/condition_second"
+            android:textColor="@color/gray_600"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_warning_message1" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_condition_check_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_condition_check_second">
+
+            <Button
+                android:id="@+id/btn_first_second_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_8dp"
+                android:fontFamily="@font/spoqahansansneoregular"
+                android:paddingVertical="10dp"
+                android:text="@string/condition_check_no"
+                android:textColor="@color/gray_700"
+                app:backgroundTint="@color/gray_050" />
+
+            <Button
+                android:id="@+id/btn_first_second_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_8dp"
+                android:fontFamily="@font/spoqahansansneoregular"
+                android:paddingVertical="10dp"
+                android:text="@string/condition_check_yes"
+                android:textColor="@color/gray_700"
+                app:backgroundTint="@color/gray_050" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_warning_message2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/warning_message1"
+            android:drawableStart="@drawable/icon_warning_triangle_mono"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/error"
+            android:drawablePadding="2dp"
+            android:fontFamily="@font/spoqahansansneoregular"
+            app:layout_constraintTop_toBottomOf="@id/ll_condition_check_second"
+            android:visibility="invisible"
+            />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/radius_8dp"
+            android:text="@string/condition_check_next"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:paddingVertical="18dp"
+            android:textSize="16dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
