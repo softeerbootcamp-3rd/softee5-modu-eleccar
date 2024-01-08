@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SendRequestFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv_receive_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:text="@string/confirm_upload"
+            android:textColor="@color/gray_700"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ib_back" />
+
+        <ImageView
+            android:id="@+id/btn_first_second_no"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/radius_8dp"
+            android:fontFamily="@font/spoqahansansneoregular"
+            android:paddingVertical="10dp"
+            android:textColor="@color/gray_300"
+            android:textSize="50sp"
+            app:backgroundTint="@color/gray_100"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="92dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:background="@drawable/radius_8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.394">
+
+            <TextView
+                android:id="@+id/tv_receive_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:lines="2"
+                android:text="@string/register_title"
+                android:textColor="@color/gray_700"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ib_back" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_reserve_time_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/charger_location"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_reserve_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="무슨도 무슨군 무슨시 좀 먼 지방"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp"
+                    android:gravity="start"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_station_location_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/charger_available_time"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_station_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="NNN도 NNN군 NN시 123-56"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_expected_charge_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/charger_borrow_price"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_expected_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="2520kwh"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="188dp"
+            android:background="@drawable/radius_8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_linear_layout">
+
+            <TextView
+                android:id="@+id/tv_receive_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:lines="2"
+                android:text="@string/charger_detail_info"
+                android:textColor="@color/gray_700"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ib_back" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_reserve_time_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/charger_type"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_reserve_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="완속,7kW"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_station_location_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/charger_install_type"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_station_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="실외 스탠드형"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_expected_charge_phrase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:text="@string/charger_use_type"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_expected_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/spoqahansansneomedium"
+                    android:text="RFID 카드키 인식으로 사용"
+                    android:textColor="@color/gray_600"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btn_cancel_rental"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/radius_8dp"
+                android:fontFamily="@font/spoqahansansneoregular"
+                android:text="@string/cancel_upload"
+                android:textColor="@color/gray_700"
+                android:textSize="16dp"
+                app:backgroundTint="@color/gray_050" />
+
+            <Button
+                android:id="@+id/btn_payment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/radius_8dp"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:text="@string/confirm_upload_btn"
+                android:textColor="@color/gray_000"
+                android:textSize="16dp"
+                app:backgroundTint="@color/main_400" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

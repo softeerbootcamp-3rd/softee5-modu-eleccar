@@ -87,6 +87,19 @@
     <string name="register_share_time_later">시간은 나중에 설정하기</string>
     <string name="register_confirm_final">성공적으로\n업로드 되었어요!</string>
     <string name="register_confirm_final_phrase">업로드 된 내 카밥은 처음 지도 화면>메뉴버튼>\n마이페이지에서 언제든지 수정할 수 있어요</string>
+    <string name="confirm_upload">이대로 업로드 할까요?</string>
+    <string name="register_title">주차하기 좋아요!</string>
+    <string name="charger_location">충전소 위치</string>
+    <string name="charger_available_time">충전가능시간</string>
+    <string name="charger_borrow_price">대여 가격</string>
+    <string name="charger_detail_info">충전기 상세 정보</string>
+    <string name="charger_type">충전기 타입</string>
+    <string name="charger_install_type">설치 형태</string>
+    <string name="charger_use_type">특이사항</string>
+    <string name="cancel_upload">취소</string>
+    <string name="confirm_upload_btn">업로드</string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
