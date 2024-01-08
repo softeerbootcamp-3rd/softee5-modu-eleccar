@@ -1,9 +1,6 @@
 package com.moduelec.moduelec.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -27,4 +24,6 @@ public class ChargerInfo {
     String imageUrl; // 충전소 사진
     Integer pricePerHour;
     String message; // 판매자가 남기는 메시지
+    @ManyToOne
+    User user;
 }
