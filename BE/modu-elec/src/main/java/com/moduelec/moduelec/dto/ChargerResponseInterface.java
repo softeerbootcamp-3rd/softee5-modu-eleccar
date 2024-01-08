@@ -2,9 +2,12 @@ package com.moduelec.moduelec.dto;
 
 public interface ChargerResponseInterface {
   Long getChargerInfoId();
-  String getType();
+  Integer getSpeed();
   Double getDistance();
   Integer getPricePerHour();
   Integer getStartHour();
   Integer getEndHour();
+  Double getLatitude();
+  Double getLongitude();
+  String getTitle();
 }

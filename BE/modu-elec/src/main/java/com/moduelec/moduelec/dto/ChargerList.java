@@ -24,16 +24,18 @@ public class ChargerList {
   @Getter
   public static class ChargerResponse{
     private Long chargerInfoId;
-    private String imageUrl;
-    private String type;
+    private Integer speed;
     private Double distance;
     private Integer pricePerHour;
     private Integer startHour;
     private Integer endHour;
+    private Double latitude;
+    private Double longitude;
+    private String title;
 
     public static ChargerResponse of(ChargerResponseInterface c){
-      return new ChargerResponse(c.getChargerInfoId(),null,c.getType(),c.getDistance(),c.getPricePerHour(),
-              c.getStartHour(),c.getEndHour());
+      return new ChargerResponse(c.getChargerInfoId(),c.getSpeed(),c.getDistance(),c.getPricePerHour(),
+              c.getStartHour(),c.getEndHour(),c.getLatitude(),c.getLongitude(),c.getTitle());
     }
   }
 }

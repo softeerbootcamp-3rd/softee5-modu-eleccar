@@ -24,6 +24,7 @@ public class ChargerInfo {
     String imageUrl; // 충전소 사진
     Integer pricePerHour;
     String message; // 판매자가 남기는 메시지
+    String title;
     @ManyToOne
     User user;
 }
