@@ -21,4 +21,5 @@ public class ChargerDetailResponse {
     private String installType;
     private String useType;
     private String imageUrl;
+    private String address;
 }

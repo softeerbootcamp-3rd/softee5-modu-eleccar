@@ -45,6 +45,7 @@ public class ChargerInfoController {
                 .installType(chargerInfo.getInstallType())
                 .useType(chargerInfo.getUseType())
                 .imageUrl(chargerInfo.getImageUrl())
+                .address(chargerInfo.getAddress())
                 .build();
     }
 }
