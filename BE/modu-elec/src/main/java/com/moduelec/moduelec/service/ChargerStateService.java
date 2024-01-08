@@ -25,9 +25,9 @@ public class ChargerStateService {
         List<Integer> reservedStartHours = eventHourRepository.findReservedStartHours(id);
 
         List<ChargerState> chargerStates = new ArrayList<>();
-        for (int i = 0; i < 24; i++) {
+        for (int i = startHour; i < endHour; i++) {
             ChargerState chargerState = new ChargerState(i, false);
-            if (i >= startHour && i < endHour && !reservedStartHours.contains(i)) {
+            if (!reservedStartHours.contains(i)) {
                 chargerState.setAvailable(true);
             }
             chargerStates.add(chargerState);
