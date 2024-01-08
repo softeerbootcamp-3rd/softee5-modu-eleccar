@@ -18,4 +18,8 @@ public class EventHour {
 
     @ManyToOne
     Event event;
+
+    public static EventHour create(ChargerInfo chargerInfo, Integer startHour, Event event){
+        return new EventHour(null,chargerInfo,startHour,event);
+    }
 }
