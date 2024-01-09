@@ -35,7 +35,8 @@ public class ChargerReservationService {
     }
     eventHourRepository.saveAll(eventHours);
 
-    fcmService.sendByToken(FcmServiceDto.create(event.getId()),userId);
+    User chargerOwner = chargerInfo.getUser();
+    fcmService.sendByToken(FcmServiceDto.create(event.getId()),chargerOwner.getId());
     return event.getId();
   }
 
