@@ -49,7 +49,7 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/spoqahansansneobold"
             android:lines="2"
-            android:text="@string/receive_request"
+            android:text="공유 신청을\n수락하시겠어요?"
             android:textColor="@color/gray_700"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,13 +65,35 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:gravity="center"
             >
-            <ImageView
-                android:id="@+id/iv_receive_request"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/img_receive_request"
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
 
-                />
+               <ImageView
+                   android:id="@+id/iv_icon_accept_request"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toBottomOf="@id/iv_background_accept_request"
+                   android:layout_marginBottom="12dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:src="@drawable/img_accept_request_icon"
+
+                   />
+
+               <ImageView
+                   android:id="@+id/iv_background_accept_request"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:src="@drawable/img_background_accept_request"
+                   />
+
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
             <LinearLayout
                 android:id="@+id/ll_reservation_info"
                 android:layout_width="match_parent"
@@ -196,28 +218,28 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_payment"
+            android:id="@+id/btn_accept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
             android:layout_marginBottom="14dp"
             android:background="@drawable/radius_8dp"
             android:fontFamily="@font/spoqahansansneobold"
-            android:text="8,000원 결제하기"
+            android:text="수락하기"
             android:textColor="@color/gray_000"
             android:textSize="16dp"
             app:backgroundTint="@color/main_400"
             app:layout_constraintBottom_toTopOf="@id/btn_cancel_rental" />
 
         <Button
-            android:id="@+id/btn_cancel_rental"
+            android:id="@+id/btn_reject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
             android:layout_marginBottom="14dp"
             android:background="@drawable/radius_8dp"
             android:fontFamily="@font/spoqahansansneoregular"
-            android:text="@string/cancel_rent"
+            android:text="거절하기"
             android:textColor="@color/gray_700"
             android:textSize="16dp"
             app:backgroundTint="@color/gray_050"

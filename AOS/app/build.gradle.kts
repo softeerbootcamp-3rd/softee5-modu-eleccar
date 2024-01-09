@@ -92,5 +92,6 @@ dependencies {
     implementation("com.google.firebase:firebase-messaging-ktx:23.0.0")
     implementation("com.google.firebase:firebase-analytics-ktx")
 
+
     implementation("junit:junit:4.13.2")
 }

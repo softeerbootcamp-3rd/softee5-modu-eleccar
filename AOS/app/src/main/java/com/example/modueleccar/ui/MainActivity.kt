@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.example.modueleccar.R
 import com.example.modueleccar.databinding.ActivityMainBinding
+import com.example.modueleccar.viewmodel.SellerViewModel
 import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
 import dagger.hilt.android.AndroidEntryPoint
@@ -15,6 +16,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityMainBinding
+    private val viewModel: SellerViewModel by viewModels()
+
     private val binding
         get() = _binding
 
@@ -22,7 +25,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         FirebaseApp.initializeApp(this@MainActivity)
-        val token = FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
+
+
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
+
             if (!task.isSuccessful) {
                 return@addOnCompleteListener
             }
@@ -33,6 +40,8 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(this@MainActivity, token, Toast.LENGTH_SHORT).show()
         }
+
+
 
     }
 

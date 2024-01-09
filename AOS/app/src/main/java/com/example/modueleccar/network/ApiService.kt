@@ -32,7 +32,17 @@ interface ApiService {
         @Query("chargerInfoId") chargerInfoId: Int,
         @Query("chargeDuration") chargeDuration: Int,
         @Query("userId") userId: Int,
+    ): Int  //Event Id
 
-    ): Int
+    @POST("charger/reservation/confirm")
+    suspend fun postReservationConfirm(
+        @Query("accept") accept: Boolean,
+        @Query("reservationId") reservationId: Int,
+        @Query("userId") userId: Int
+    ): Boolean
+
+
+
+
 
 }
