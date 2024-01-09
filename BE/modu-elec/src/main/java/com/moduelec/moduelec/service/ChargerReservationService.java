@@ -1,5 +1,6 @@
 package com.moduelec.moduelec.service;
 
+import com.moduelec.moduelec.dto.FcmServiceDto;
 import com.moduelec.moduelec.entity.*;
 import com.moduelec.moduelec.repository.*;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,7 @@ public class ChargerReservationService {
   private final UserRepository userRepository;
   private final ChargerInfoRepository chargerInfoRepository;
   private final ReservationRepository reservationRepository;
+  private final FcmService fcmService;
 
   @Transactional
   public Long createEvent(int startHour, int duration, Long userId, Long chargerInfoId){
@@ -32,6 +34,8 @@ public class ChargerReservationService {
       eventHours.add(EventHour.create(chargerInfo,startHour+i,event));
     }
     eventHourRepository.saveAll(eventHours);
+
+    fcmService.sendByToken(FcmServiceDto.create(event.getId()),userId);
     return event.getId();
   }
 

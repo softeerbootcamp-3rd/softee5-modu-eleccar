@@ -18,4 +18,5 @@ public class User {
     Long id;
     String nickname;
     Integer point;
+    String fcmToken;
 }

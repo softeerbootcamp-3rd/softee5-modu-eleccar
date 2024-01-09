@@ -23,6 +23,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      - name: make application.properties
+        run: |
+          cd ./src/main/resources
+          touch ./firebase-adminsdk.json
+          echo "${{ secrets.FIRBASE_ADMIN }}" > ./firebase-adminsdk.json
+        shell: bash
+
         ## gradle build
       - name: Build with Gradle
         run: |
