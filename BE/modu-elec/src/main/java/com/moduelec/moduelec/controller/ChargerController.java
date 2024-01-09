@@ -28,7 +28,7 @@ public class ChargerController {
   }
   @PostMapping("/charger/reservation/confirm")
   public Boolean confirm(@RequestParam(value = "accept")Boolean accept,
-                         @RequestParam(value = "reservationId")Long eventId,
+                         @RequestParam(value = "eventId")Long eventId,
                          @RequestParam(value = "userId")Long userId){
     chargerReservationService.eventConfirmProcess(eventId,userId,accept);
     return Boolean.TRUE;
