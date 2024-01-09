@@ -35,6 +35,7 @@ public class FcmService {
                                             .setBody(dto.getBody())
                                             .setImage(dto.getImageUrl())
                                             .setClickAction("push_click")
+                                            .setChannelId("119")
                                             .build()
                             )
                             .build()
