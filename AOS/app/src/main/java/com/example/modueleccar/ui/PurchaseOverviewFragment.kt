@@ -51,7 +51,7 @@ class PurchaseOverviewFragment : Fragment(), OnMapReadyCallback {
             }
 
         }
-        viewModel.fetchData()
+        //viewModel.fetchData()
 
 
 
