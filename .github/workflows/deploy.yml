@@ -1,7 +1,7 @@
 name: deploy
 on:
   push:
-    branches: ['main','Backend','be/feat/fcm']
+    branches: ['Backend','be/feat/fcm']
 jobs:
   CI-CD:
     runs-on: ubuntu-latest
