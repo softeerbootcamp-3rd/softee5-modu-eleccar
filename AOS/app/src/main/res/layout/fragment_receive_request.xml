@@ -58,122 +58,141 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:background="@drawable/radius_8dp"
-            android:backgroundTint="@color/gray_050"
             android:orientation="vertical"
-            android:paddingHorizontal="26dp"
-            android:paddingVertical="18dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/iv_receive_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_receive_request"
 
+                />
             <LinearLayout
+                android:id="@+id/ll_reservation_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal">
+                android:layout_marginHorizontal="14dp"
+                android:background="@drawable/radius_8dp"
+                android:backgroundTint="@color/gray_050"
+                android:orientation="vertical"
+                android:paddingHorizontal="26dp"
+                android:paddingVertical="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="120dp"
+                >
 
-                <TextView
-                    android:id="@+id/tv_reserve_time_phrase"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/spoqahansansneoregular"
-                    android:text="@string/reserve_time"
-                    android:textColor="@color/gray_400"
-                    android:textSize="14dp" />
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tv_reserve_time"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/tv_reserve_time_phrase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/spoqahansansneoregular"
+                        android:text="@string/reserve_time"
+                        android:textColor="@color/gray_400"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_reserve_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="38dp"
+                        android:fontFamily="@font/spoqahansansneomedium"
+                        android:text="12:00 - 18:00, 총 6시간"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="38dp"
-                    android:fontFamily="@font/spoqahansansneomedium"
-                    android:text="12:00 - 18:00, 총 6시간"
-                    android:textColor="@color/gray_600"
-                    android:textSize="14dp" />
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_station_location_phrase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/spoqahansansneoregular"
+                        android:text="@string/station_location"
+                        android:textColor="@color/gray_400"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_station_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:fontFamily="@font/spoqahansansneomedium"
+                        android:text="NNN도 NNN군 NN시 123-56"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_expected_charge_phrase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/spoqahansansneoregular"
+                        android:text="@string/expected_charge"
+                        android:textColor="@color/gray_400"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_expected_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:fontFamily="@font/spoqahansansneomedium"
+                        android:text="2520kwh"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_rental_price_phrase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/spoqahansansneoregular"
+                        android:text="@string/rental_price"
+                        android:textColor="@color/gray_400"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_rental_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="38dp"
+                        android:fontFamily="@font/spoqahansansneomedium"
+                        android:text="8,000원"
+                        android:textColor="@color/main_400"
+                        android:textSize="14dp" />
+                </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_station_location_phrase"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/spoqahansansneoregular"
-                    android:text="@string/station_location"
-                    android:textColor="@color/gray_400"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/tv_station_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:fontFamily="@font/spoqahansansneomedium"
-                    android:text="NNN도 NNN군 NN시 123-56"
-                    android:textColor="@color/gray_600"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_expected_charge_phrase"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/spoqahansansneoregular"
-                    android:text="@string/expected_charge"
-                    android:textColor="@color/gray_400"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/tv_expected_charge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:fontFamily="@font/spoqahansansneomedium"
-                    android:text="2520kwh"
-                    android:textColor="@color/gray_600"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_rental_price_phrase"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/spoqahansansneoregular"
-                    android:text="@string/rental_price"
-                    android:textColor="@color/gray_400"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/tv_rental_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="38dp"
-                    android:fontFamily="@font/spoqahansansneomedium"
-                    android:text="8,000원"
-                    android:textColor="@color/main_400"
-                    android:textSize="14dp" />
-            </LinearLayout>
         </LinearLayout>
 
         <Button

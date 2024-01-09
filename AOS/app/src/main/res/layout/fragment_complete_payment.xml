@@ -37,11 +37,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_complete_payment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_complete_payment_phrase"
+            android:layout_marginBottom="21dp"
+            />
         <TextView
+            android:id = "@+id/tv_complete_payment_phrase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/main_400"
-            android:text="8,000원\n결제완료!"
+            android:text="8,000원 결제완료!"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -12,6 +12,7 @@ class FCMMessagingService : FirebaseMessagingService() {
     }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        Log.d("remoteMessage", remoteMessage.toString())
         super.onMessageReceived(remoteMessage)
 
     }

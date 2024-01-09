@@ -9,5 +9,6 @@ data class Charger(
     val startHour: Int,
     val type: String,
     val latitude: Double,
-    val longitude: Double
+    val longitude: Double,
+    val title: String
 )

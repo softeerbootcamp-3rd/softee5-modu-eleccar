@@ -13,7 +13,8 @@ import com.example.modueleccar.ui.adapter.ChargerAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomSheetFragment(
-    private val chargerList: ChargerList
+    private val chargerList: ChargerList,
+    private val navigationCallback: (Int, Double) -> Unit
 ) : BottomSheetDialogFragment() {
     private lateinit var _binding: BottomSheetBinding
     private val binding
@@ -28,7 +29,7 @@ class BottomSheetFragment(
         _binding = BottomSheetBinding.inflate(inflater, container, false)
 
         binding.root.setBackgroundColor(Color.WHITE)
-        binding.rvChargerList.adapter = ChargerAdapter(chargerList)
+        binding.rvChargerList.adapter = ChargerAdapter(chargerList, navigationCallback)
         binding.rvChargerList.layoutManager = LinearLayoutManager(context)
         return binding.root
     }

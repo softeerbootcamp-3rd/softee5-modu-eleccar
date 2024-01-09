@@ -3,7 +3,7 @@
     <string name="main_search_place">장소를 검색해보세요!</string>
     <string name="main_enable_list">현재 충전 가능한 곳만</string>
     <string name="main_dc_car">DC차 데모</string>
-    <string name="choose_time">충전을 원하는 시작 시간과\n종료 시간을 선택해주세요</string>
+    <string name="choose_time">충전을 원하는\n시간대를 선택해주세요</string>
     <string name="common_back1">돌아가기</string>
     <string name="common_back2">뒤로 가기</string>
     <string name="apply_reserve">예약 신청</string>
@@ -35,6 +35,7 @@
     <string name="picture">사진</string>
     <string name="request_confirm_message">카밥 주인에게\n예약 신청을 보낼까요?</string>
     <string name="reserve_time">예약 시간</string>
+    <string name="start_time">시작 시간</string>
     <string name="average_time_message">평균 2분 정도 걸려요\n조금만 기다려 주세요</string>
     <string name="cancel_apply">신청 취소하기</string>
     <string name="cancel_rent">대여 취소하기</string>
@@ -72,6 +73,8 @@
     <string name="register_detail_title">대여글 제목</string>
     <string name="register_detail_edit_text">입력하세요 (30자 이내)</string>
     <string name="register_detail_type">충전기 타입</string>
+    <string name="start_time_description">괄호 안의 숫자는 최대 충전 가능 시간을 의미해요</string>
+    <string name="charge_time">충전 시간</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

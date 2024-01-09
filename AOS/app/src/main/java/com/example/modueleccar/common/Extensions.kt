@@ -7,6 +7,7 @@ import android.graphics.Point
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.view.WindowManager
+import com.example.modueleccar.R
 
 fun Context.dialogResize(dialog: Dialog, width: Float, height: Float){
     val windowManager = getSystemService(Context.WINDOW_SERVICE) as WindowManager
@@ -33,5 +34,13 @@ fun Context.dialogResize(dialog: Dialog, width: Float, height: Float){
 
         window?.setLayout(x, y)
     }
-    dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+    dialog.window?.setBackgroundDrawable(getDrawable(R.drawable.radius_12dp))
+    //dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 }
+
+fun convertTimeString(startTime : Int, endTime: Int): String{
+    val startString = String.format("$02d", startTime)
+    val endString = String.format("$02d", endTime)
+    return "${startTime}:00 - ${endTime}:00"
+}
+
