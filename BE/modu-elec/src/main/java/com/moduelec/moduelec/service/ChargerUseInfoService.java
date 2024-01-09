@@ -21,20 +21,18 @@ public class ChargerUseInfoService {
 
         ChargerUseInfoDto dto = new ChargerUseInfoDto();
 
-        if(event.getReservation().getUser().getId().equals(userId)) {
-            ChargerInfo chargerInfo = eventHours.get(0).getChargerInfo();
+        ChargerInfo chargerInfo = eventHours.get(0).getChargerInfo();
 
-            Integer reservedStartHour = eventHours.get(0).getStartHour();
-            Integer reservedEndHour = eventHours.get(eventHours.size()-1).getStartHour() + 1;
+        Integer reservedStartHour = eventHours.get(0).getStartHour();
+        Integer reservedEndHour = eventHours.get(eventHours.size()-1).getStartHour() + 1;
 
 
-            dto.setReservedStartHour(reservedStartHour);
-            dto.setReservedEndHour(reservedEndHour);
-            dto.setAddress(chargerInfo.getAddress());
-            dto.setExpectedChargeAmount(chargerInfo.getSpeed() * (reservedEndHour - reservedStartHour));
-            dto.setTotalPrice(chargerInfo.getPricePerHour() * (reservedEndHour - reservedStartHour));
-            dto.setMessage(chargerInfo.getMessage());
-        }
+        dto.setReservedStartHour(reservedStartHour);
+        dto.setReservedEndHour(reservedEndHour);
+        dto.setAddress(chargerInfo.getAddress());
+        dto.setExpectedChargeAmount(chargerInfo.getSpeed() * (reservedEndHour - reservedStartHour));
+        dto.setTotalPrice(chargerInfo.getPricePerHour() * (reservedEndHour - reservedStartHour));
+        dto.setMessage(chargerInfo.getMessage());
 
         return dto;
     }
