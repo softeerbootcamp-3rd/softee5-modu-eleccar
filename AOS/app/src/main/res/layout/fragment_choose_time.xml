@@ -8,43 +8,25 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="14dp">
 
-        <ImageButton
-            android:id="@+id/ib_back_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="@color/gray_000"
-            android:padding="0dp"
-            android:src="@drawable/icon_arrow_left_small_mono"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/gray_600" />
-
+        <include
+            android:id="@id/header"
+            layout="@layout/header_layout" />
 
         <TextView
             android:id="@+id/tv_choose_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/spoqahansansneobold"
             android:lines="2"
             android:text="@string/choose_time"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ib_back_arrow" />
+            app:layout_constraintTop_toBottomOf="@id/header" />
 
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="13dp"
-            android:src="@drawable/icon_calendar_check_mono"
-            app:layout_constraintBottom_toBottomOf="@id/tv_choose_time"
-            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/btn_apply_reserve"
@@ -61,5 +43,384 @@
             android:textColor="@color/gray_000"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:drawableEnd="@drawable/icon_calendar_check_mono"
+            android:drawablePadding="3.5dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="1월 10일"
+            android:textColor="@color/gray_700"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_time" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray_000"
+            android:padding="0dp"
+            android:src="@drawable/icon_arrow_left_small_mono"
+            app:layout_constraintBottom_toBottomOf="@id/tv_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_date"
+            app:tint="@color/gray_600" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray_000"
+            android:padding="0dp"
+            android:src="@drawable/icon_arrow_right_small_mono"
+            app:layout_constraintBottom_toBottomOf="@id/tv_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_date"
+            app:tint="@color/gray_600" />
+
+        <LinearLayout
+            android:id="@+id/ll_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_date">
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:text="@string/start_time"
+                android:textColor="@color/gray_700"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_start_time_phrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/spoqahansansneoregular"
+                android:text="@string/start_time_description"
+                android:textColor="@color/gray_700"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id = "@+id/ll_start_time_btn_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:columnCount="3"
+            android:orientation="vertical"
+            android:rowCount="4"
+            app:layout_constraintTop_toBottomOf="@id/ll_start_time">
+
+            <LinearLayout
+                android:id="@+id/ll_first_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_clock_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="  9:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_clock_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="10:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_clock_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="11:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_second_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_clock_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="12:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_clock_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="13:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_clock_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="14:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_third_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_clock_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="15:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_clock_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="16:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_clock_17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="17:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fourth_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_clock_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="18:00"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_clock_19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="18:00(0)"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/btn_clock_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="18:00(0)"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_charge_time_phrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/charge_time"
+            app:layout_constraintTop_toBottomOf="@id/ll_start_time_btn_list"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/gray_700"
+            android:layout_marginTop="30dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            />
+        <LinearLayout
+            android:id="@+id/btn_charge_btn_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_charge_time_phrase"
+            >
+            <LinearLayout
+                android:id="@+id/ll_charge_time_first_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_charge_time_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="1시간"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_charge_time_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="2시간"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050"
+                   />
+
+                <Button
+                    android:id="@+id/btn_charge_time_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="3시간"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_charge_time_second_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_charge_time_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="4시간"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050" />
+
+                <Button
+                    android:id="@+id/btn_charge_time_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="5시간"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050"
+                    />
+
+                <Button
+                    android:id="@+id/btn_charge_time_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radius_8dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="6시간"
+                    android:textColor="@color/gray_600"
+                    app:backgroundTint="@color/gray_050"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

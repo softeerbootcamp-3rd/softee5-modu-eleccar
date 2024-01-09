@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".ui.MainActivity">
 
         <LinearLayout
             android:id="@+id/ll_top_bar"
@@ -31,6 +31,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginEnd="14dp"
                 android:textColorHint="@color/gray_200">
 
                 <EditText
@@ -47,66 +48,9 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginEnd="17dp"
-                android:backgroundTint="@color/gray_000"
-                android:src="@drawable/icon_user_mono" />
+
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ll_btn_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:orientation="horizontal"
-            android:paddingBottom="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ll_top_bar">
-
-            <Button
-                android:id="@+id/btn_enable_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/radius_8dp"
-                android:backgroundTint="@color/gray_000"
-                android:fontFamily="@font/spoqahansansneobold"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp"
-                android:text="@string/main_enable_list" />
-
-            <Button
-                android:id="@+id/btn_dc_demo1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/radius_8dp"
-                android:fontFamily="@font/spoqahansansneobold"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp"
-                android:text="@string/main_dc_car" />
-
-            <Button
-                android:id="@+id/btn_dc_demo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@drawable/radius_8dp"
-                android:fontFamily="@font/spoqahansansneobold"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp"
-                android:text="@string/main_dc_car" />
-        </LinearLayout>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/map_fragment"
@@ -114,20 +58,39 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ll_btn_list" />
+            app:layout_constraintTop_toBottomOf="@id/ll_top_bar"
+           />
 
+        <Button
+            android:id="@+id/btn_enable_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/radius_8dp"
+            android:backgroundTint="@color/gray_000"
+            android:drawableEnd="@drawable/icon_check_enable"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="4dp"
+            android:fontFamily="@font/spoqahansansneobold"
+            android:text="@string/main_enable_list"
+            app:layout_constraintTop_toBottomOf="@id/ll_top_bar"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="14dp"/>
 
         <Button
             android:id="@+id/btn_show_list"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginStart="14dp"
-            android:layout_marginBottom="12dp"
             android:background="@drawable/shape_fl_btn"
             android:drawableTop="@drawable/icon_plus"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="@id/fcv_station_info"
             app:layout_constraintStart_toStartOf="parent" />
+
 
 
         <androidx.fragment.app.FragmentContainerView
@@ -139,16 +102,31 @@
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <Button
+            android:id="@+id/btn_current_location"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="23dp"
+            android:background="@drawable/shape_fl_btn"
+            app:backgroundTint="@color/gray_000"
+            android:drawableTop="@drawable/icon_current_location"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/fcv_station_info"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
             android:id="@+id/btn_show_bottom_sheet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:background="@drawable/radius_8dp"
-            app:backgroundTint="@color/gray_000"
             android:fontFamily="@font/spoqahansansneobold"
             android:text="내 위치 근처 충전소"
-            android:textColor="@color/gray_600"
-            android:textSize="14dp"
+            android:textColor="@color/main_400"
+            android:textSize="16dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingVertical="5dp"
+            app:backgroundTint="@color/gray_000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

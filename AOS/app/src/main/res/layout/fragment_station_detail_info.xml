@@ -132,6 +132,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_station_title" />
 
+
         <LinearLayout
             android:id="@+id/ll_station_info_phrase"
             android:layout_width="match_parent"
@@ -156,7 +157,7 @@
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/station_addr"
+                    android:id="@+id/tv_station_addr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="31dp"
@@ -233,6 +234,13 @@
             android:background="@color/gray_050"
             app:layout_constraintTop_toBottomOf="@id/ll_station_info_phrase" />
 
+        <ScrollView
+            android:id="@+id/sv_info_and_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/line_view1">
+
+        </ScrollView>
         <LinearLayout
             android:id="@+id/ll_station_detail_info"
             android:layout_width="match_parent"
@@ -335,6 +343,75 @@
             </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/ll_station_detail_info">
+            
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/spoqahansansneobold"
+                    android:text="@string/review_phrase"
+                    android:textColor="@color/gray_700"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="18dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:text="32명이 즐겨찾기로 등록했어요"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="14dp"
+                    android:fontFamily="@font/spoqahansansneoregular"
+                    android:textColor="@color/gray_500"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+          
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/radius_8dp"
+                    android:backgroundTint="@color/gray_050"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="합리적인 가격" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/radius_8dp"
+                    android:backgroundTint="@color/gray_050"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="빠른 수락" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/radius_8dp"
+                    android:backgroundTint="@color/gray_050"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="주차공간 넓음" />
+            </LinearLayout>
+        </LinearLayout>
 
         <View
             android:id="@+id/line_view2"
@@ -391,57 +468,6 @@
                 android:textSize="12dp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/ll_station_detail_info">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:fontFamily="@font/spoqahansansneobold"
-                android:text="@string/review_phrase"
-                android:textColor="@color/gray_700"
-                android:textSize="18dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:background="@drawable/radius_8dp"
-                    android:backgroundTint="@color/gray_050"
-                    android:paddingHorizontal="8dp"
-                    android:paddingVertical="4dp"
-                    android:text="합리적인 가격" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:background="@drawable/radius_8dp"
-                    android:backgroundTint="@color/gray_050"
-                    android:paddingHorizontal="8dp"
-                    android:paddingVertical="4dp"
-                    android:text="빠른 수락" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:background="@drawable/radius_8dp"
-                    android:backgroundTint="@color/gray_050"
-                    android:paddingHorizontal="8dp"
-                    android:paddingVertical="4dp"
-                    android:text="주차공간 넓음" />
-            </LinearLayout>
-        </LinearLayout>
 
         <Button
             android:id="@+id/btn_apply_reservation"

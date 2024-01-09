@@ -8,70 +8,142 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="14dp">
 
-        <ImageButton
-            android:id="@+id/ib_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/spoqahansansneomedium"
-            android:src="@drawable/icon_arrow_left_small_mono"
-            android:textColor="@color/gray_600"
-            android:padding="0dp"
-            android:backgroundTint="@color/gray_000"
-            android:textSize="12dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/gray_600" />
-
-        <ImageButton
-            android:id="@+id/ib_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="14dp"
-            android:backgroundTint="@color/gray_000"
-            android:padding="0dp"
-            android:src="@drawable/icon_x_mono"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/gray_600" />
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_layout" />
 
         <TextView
             android:id="@+id/tv_payment_phrase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="51dp"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/spoqahansansneobold"
             android:text="@string/payment_phrase"
             android:textColor="@color/gray_700"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/header" />
 
-        <TextView
-            android:id="@+id/tv_payment_type"
+        <ImageView
+            android:id="@+id/iv_payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="33dp"
-            android:fontFamily="@font/spoqahansansneobold"
-            android:text="@string/payment_type"
-            android:textColor="@color/gray_700"
-            android:textSize="18dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/img_payment"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_payment_phrase" />
+
+        <LinearLayout
+            android:id="@+id/ll_payment_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_payment">
+
+            <TextView
+                android:id="@+id/tv_payment_type_phrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/spoqahansansneobold"
+                android:text="@string/payment_type"
+                android:textColor="@color/gray_700"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
+
+                <RadioButton
+                    android:id="@+id/btn_carbab_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_payment"
+                    android:fontFamily="@font/spoqahansansneobold"
+                    android:text=" 카밥 페이 사용"
+                    android:textColor="@color/gray_700"
+                    android:textSize="16dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radius_8dp"
+                    android:backgroundTint="@color/gray_100"
+                    android:padding="18dp">
+
+                    <ImageView
+                        android:id="@+id/iv_car_bab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_car_bab"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_car_bab_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:fontFamily="@font/spoqahansansneobold"
+                        android:text="카밥 페이"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16dp"
+                        app:layout_constraintStart_toEndOf="@id/iv_car_bab"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_car_bab_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/spoqahansansneobold"
+                        android:text="70,000원"
+                        android:textSize="16dp"
+                        android:textColor="@color/gray_600"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/car_bab_pay_phrase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="수수료 없이 충전하기"
+                        android:textColor="@color/gray_600"
+                        app:layout_constraintStart_toStartOf="@id/tv_car_bab_pay"
+                        app:layout_constraintTop_toBottomOf="@id/tv_car_bab_account" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <RadioButton
+                    android:id="@+id/btn_other_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_payment"
+                    android:fontFamily="@font/spoqahansansneobold"
+                    android:layout_marginTop="20dp"
+                    android:text=" 다른 결제 수단"
+                    android:textColor="@color/gray_700"
+                    android:textSize="16dp" />
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
-            android:layout_marginTop="14dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_payment_type">
+            tools:layout_editor_absoluteY="178dp">
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -84,8 +156,6 @@
                 />
 
         </RadioGroup>
-
-
 
 
         <Button

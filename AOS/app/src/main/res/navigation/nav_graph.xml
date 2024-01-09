@@ -8,19 +8,23 @@
         android:id="@+id/purchaseOverviewFragment"
         android:name="com.example.modueleccar.ui.PurchaseOverviewFragment"
         android:label="fragment_purchase_overview"
-        tools:layout="@layout/fragment_purchase_overview" >
+        tools:layout="@layout/fragment_purchase_overview">
+        <argument
+            android:name="chargerDetail"
+            app:argType="com.example.modueleccar.data.ChargerDetail" />
         <action
             android:id="@+id/action_purchaseOverviewFragment_to_stationDetailInfoFragment"
             app:destination="@id/stationDetailInfoFragment" />
         <action
             android:id="@+id/action_purchaseOverviewFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/chooseTimeFragment"
         android:name="com.example.modueleccar.ui.ChooseTimeFragment"
         android:label="fragment_choose_time"
-        tools:layout="@layout/fragment_choose_time" >
+        tools:layout="@layout/fragment_choose_time">
         <action
             android:id="@+id/action_chooseTimeFragment_to_sendRequestFragment"
             app:destination="@id/sendRequestFragment" />
@@ -29,7 +33,7 @@
         android:id="@+id/receiveRequestFragment"
         android:name="com.example.modueleccar.ui.ReceiveRequestFragment"
         android:label="fragment_receive_request"
-        tools:layout="@layout/fragment_receive_request" >
+        tools:layout="@layout/fragment_receive_request">
         <action
             android:id="@+id/action_receiveRequestFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
@@ -38,7 +42,7 @@
         android:id="@+id/sendRequestFragment"
         android:name="com.example.modueleccar.ui.SendRequestFragment"
         android:label="fragment_send_request"
-        tools:layout="@layout/fragment_send_request" >
+        tools:layout="@layout/fragment_send_request">
         <action
             android:id="@+id/action_sendRequestFragment_to_receiveRequestFragment"
             app:destination="@id/receiveRequestFragment" />
@@ -47,7 +51,8 @@
         android:id="@+id/stationDetailInfoFragment"
         android:name="com.example.modueleccar.ui.StationDetailInfoFragment"
         android:label="fragment_station_detail_info"
-        tools:layout="@layout/fragment_station_detail_info" >
+        tools:layout="@layout/fragment_station_detail_info">
+        <argument android:name="chargerDetail" />
         <action
             android:id="@+id/action_stationDetailInfoFragment_to_chooseTimeFragment"
             app:destination="@id/chooseTimeFragment" />
@@ -56,7 +61,7 @@
         android:id="@+id/paymentFragment"
         android:name="com.example.modueleccar.ui.PaymentFragment"
         android:label="fragment_payment"
-        tools:layout="@layout/fragment_payment" >
+        tools:layout="@layout/fragment_payment">
         <action
             android:id="@+id/action_paymentFragment_to_completePaymentFragment"
             app:destination="@id/completePaymentFragment" />
@@ -64,7 +69,7 @@
     <fragment
         android:id="@+id/completePaymentFragment"
         android:name="com.example.modueleccar.ui.CompletePaymentFragment"
-        android:label="CompletePaymentFragment" >
+        android:label="CompletePaymentFragment">
         <action
             android:id="@+id/action_completePaymentFragment_to_useDescriptionFragment"
             app:destination="@id/useDescriptionFragment" />
@@ -78,7 +83,7 @@
         android:id="@+id/registerFragment"
         android:name="com.example.modueleccar.ui.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_conditionCheckFragment"
             app:destination="@id/conditionCheckFragment" />
@@ -87,7 +92,7 @@
         android:id="@+id/conditionCheckFragment"
         android:name="com.example.modueleccar.ui.ConditionCheckFragment"
         android:label="fragment_condition_check"
-        tools:layout="@layout/fragment_condition_check" >
+        tools:layout="@layout/fragment_condition_check">
         <action
             android:id="@+id/action_conditionCheckFragment_to_registerLocationFragment"
             app:destination="@id/registerLocationFragment" />
