@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "980435328753",
+    "project_id": "softee5-119",
+    "storage_bucket": "softee5-119.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980435328753:android:8f6c4b614dc2cf762b1350",
+        "android_client_info": {
+          "package_name": "com.example.modueleccar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo3aKq_LP42yuUXSrLrf2vmhgjRyGc7EM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
