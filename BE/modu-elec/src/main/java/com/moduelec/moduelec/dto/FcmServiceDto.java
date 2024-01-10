@@ -13,7 +13,8 @@ public class FcmServiceDto {
   private Long eventId;
 
   public static FcmServiceDto create(Long eventId){
-    return new FcmServiceDto("sample body message","sample title",
-            "https://avatars.githubusercontent.com/u/136432473?v=4","confirm page",eventId);
+    return new FcmServiceDto("소프티어 님이 내 카밥을 공유받고 싶어해요!","카밥 알림",
+            "https://artique-profile.s3.ap-northeast-2.amazonaws.com/johan1103%40naver.com/app_icon.jpeg",
+            "confirm page",eventId);
   }
 }
