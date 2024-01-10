@@ -1,7 +1,7 @@
 name: deploy
 on:
   push:
-    branches: ['main','Backend']
+    branches: ['Backend','be/feat/fcm']
 jobs:
   CI-CD:
     runs-on: ubuntu-latest
@@ -22,6 +22,15 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
+
+      - name: make application.properties
+        run: |
+          pwd
+          ls -al
+          cd ./BE/modu-elec/src/main/resources
+          touch ./application-secret.properties
+          echo "${{ secrets.APPLICATION_SECRET }}" > ./application-secret.properties
+        shell: bash
 
         ## gradle build
       - name: Build with Gradle

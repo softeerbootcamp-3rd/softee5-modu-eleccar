@@ -14,8 +14,8 @@ public class InitDataComponent {
 
   @PostConstruct
   public void initData(){
-    User alice = new User(1L,"Alice",1000000000);
-    User bob = new User(2L,"Bob",1000000000);
+    User alice = new User(1L,"Alice",1000000000,null);
+    User bob = new User(2L,"Bob",1000000000,null);
 
     userRepository.save(alice);
     userRepository.save(bob);

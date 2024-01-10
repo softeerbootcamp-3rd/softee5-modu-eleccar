@@ -18,4 +18,9 @@ public class User {
     Long id;
     String nickname;
     Integer point;
+    String fcmToken;
+
+    public void updateToken(String fcmToken){
+        this.fcmToken=fcmToken;
+    }
 }
