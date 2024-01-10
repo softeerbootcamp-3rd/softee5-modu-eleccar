@@ -22,4 +22,5 @@ public class ChargerDetailResponse {
     private String useType;
     private String imageUrl;
     private String address;
+    private String title;
 }
