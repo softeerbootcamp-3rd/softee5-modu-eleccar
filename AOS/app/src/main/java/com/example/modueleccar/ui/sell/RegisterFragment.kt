@@ -1,4 +1,4 @@
-package com.example.modueleccar.ui
+package com.example.modueleccar.ui.sell
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

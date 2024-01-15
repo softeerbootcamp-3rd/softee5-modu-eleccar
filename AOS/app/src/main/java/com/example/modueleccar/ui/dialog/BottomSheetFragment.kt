@@ -28,7 +28,6 @@ class BottomSheetFragment(
 
         _binding = BottomSheetBinding.inflate(inflater, container, false)
 
-        binding.root.setBackgroundColor(Color.WHITE)
         binding.rvChargerList.adapter = ChargerAdapter(chargerList, navigationCallback)
         binding.rvChargerList.layoutManager = LinearLayoutManager(context)
         return binding.root

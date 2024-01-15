@@ -8,7 +8,7 @@ import javax.inject.Inject
 class EventRepository @Inject constructor(
     private val apiService: ApiService
 ){
-    suspend fun getEventId(reservationInfo: ReservationInfo): Int{
+    suspend fun postReservation(reservationInfo: ReservationInfo): Int{
         return apiService.postReservation(
             reservationInfo.startHour,
             reservationInfo.chargerInfoId,

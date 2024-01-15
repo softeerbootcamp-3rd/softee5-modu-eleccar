@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.RegisterFragment">
+    tools:context=".ui.sell.RegisterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,52 +40,70 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_register_phrase1" />
 
-        <View
-            android:id="@+id/line"
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
+        <ImageView
+            android:id="@+id/iv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_register"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/radius_7dp"
-            android:backgroundTint="@color/gray_100"
+            app:layout_constraintBottom_toBottomOf="parent"
             />
-        <LinearLayout
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ll_register_step_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_register"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:orientation="horizontal"
-            android:weightSum="3"
+            android:layout_marginTop="46dp"
             >
-
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/radius_7dp"
+                android:backgroundTint="@color/main_200"
+                />
             <ImageView
+                android:id = "@+id/iv_first_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_first"
-                android:layout_weight="1"
-
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_second_icon"
                 />
             <ImageView
+                android:id = "@+id/iv_second_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_second"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_first_icon"
+                app:layout_constraintEnd_toStartOf="@id/iv_third_icon"
                 />
             <ImageView
+                android:id = "@+id/iv_third_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_third"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_second_icon"
+                app:layout_constraintEnd_toEndOf="parent"
                 />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ll_register_step_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,11 +111,10 @@
             app:layout_constraintTop_toBottomOf="@id/ll_register_step_view"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:orientation="horizontal"
-            android:weightSum="3"
             >
 
             <TextView
+                android:id= "@+id/tv_step_first"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_step1"
@@ -105,8 +122,12 @@
                 android:textAlignment="center"
                 android:textColor="@color/gray_600"
                 android:fontFamily="@font/spoqahansansneoregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_step_second"
                 />
             <TextView
+                android:id="@+id/tv_step_second"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_step2"
@@ -114,8 +135,12 @@
                 android:textAlignment="center"
                 android:textColor="@color/gray_600"
                 android:fontFamily="@font/spoqahansansneoregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_step_first"
+                app:layout_constraintEnd_toStartOf="@id/tv_step_third"
                 />
             <TextView
+                android:id="@+id/tv_step_third"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register_step3"
@@ -123,8 +148,11 @@
                 android:textAlignment="center"
                 android:textColor="@color/gray_600"
                 android:fontFamily="@font/spoqahansansneoregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_step_second"
+                app:layout_constraintEnd_toEndOf="parent"
                 />
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <TextView

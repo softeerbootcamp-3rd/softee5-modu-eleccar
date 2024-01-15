@@ -14,5 +14,6 @@ data class ChargerDetail(
     val speed: Int,
     val startHour: Int,
     val useType: String,
-    val address: String
-): Serializable
+    val address: String,
+    val title: String
+) : Serializable

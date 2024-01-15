@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.modueleccar.data.Charger
 import com.example.modueleccar.data.ChargerDetail
 import com.example.modueleccar.data.ChargerList
 import com.example.modueleccar.repository.ChargerDetailRepository
@@ -19,8 +20,14 @@ class ChargerListViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _chargerList = MutableLiveData<ChargerList>()
+    private var _availableChargeState = MutableLiveData(false)
+    private val _selectedCharger = MutableLiveData<Charger>()
     val chargerList
         get() = _chargerList
+    val availableChargerState
+        get() = _availableChargeState
+    val selectedCharger
+        get() = _selectedCharger
 
     fun fetchData() {
         val latitude = 1.3
@@ -32,6 +39,13 @@ class ChargerListViewModel @Inject constructor(
         }
     }
 
+    fun updateAvailableChargeState(state: Boolean) {
+        _availableChargeState.postValue(state)
+    }
+
+    fun fetchSelectedCharger(charger: Charger ) {
+        _selectedCharger.postValue(charger)
+    }
     suspend fun getChargerDetail(chargerInfoId: Int, distance: Double): ChargerDetail {
         return chargerDetailRepository.getChargerDetail(chargerInfoId, distance)
     }

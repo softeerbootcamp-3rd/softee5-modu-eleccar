@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ChooseTimeFragment">
+    tools:context=".ui.purchase.ChooseTimeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -285,7 +285,7 @@
                     android:background="@drawable/radius_8dp"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="8dp"
-                    android:text="18:00(0)"
+                    android:text="19:00"
                     android:textColor="@color/gray_600"
                     app:backgroundTint="@color/gray_050"
                     android:visibility="invisible"/>
@@ -299,7 +299,7 @@
                     android:background="@drawable/radius_8dp"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="8dp"
-                    android:text="18:00(0)"
+                    android:text="20:00"
                     android:textColor="@color/gray_600"
                     app:backgroundTint="@color/gray_050"
                     android:visibility="invisible"/>

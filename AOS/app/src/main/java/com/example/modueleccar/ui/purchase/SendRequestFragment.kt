@@ -1,4 +1,4 @@
-package com.example.modueleccar.ui
+package com.example.modueleccar.ui.purchase
 
 import android.os.Bundle
 import android.util.Log
@@ -15,22 +15,25 @@ import com.example.modueleccar.viewmodel.ChargerStateViewModel
 
 class SendRequestFragment : Fragment() {
     private lateinit var _binding: FragmentSendRequestBinding
-    private val viewModel : ChargerStateViewModel by activityViewModels()
+    private val viewModel: ChargerStateViewModel by activityViewModels()
     private val binding
         get() = _binding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentSendRequestBinding.inflate(inflater,container,false)
+        _binding = FragmentSendRequestBinding.inflate(inflater, container, false)
 
         binding.ivSendRequest.setOnClickListener {
             findNavController().navigate(R.id.action_sendRequestFragment_to_receiveRequestFragment)
         }
-
-        viewModel.eventId.observe(viewLifecycleOwner) {
-            Log.d("EventId", it.toString())
+        viewModel.registerPeriodicJob()
+        viewModel.isAccepted.observe(viewLifecycleOwner) { result ->
+            if (result) {
+                findNavController().navigate(R.id.action_sendRequestFragment_to_receiveRequestFragment)
+            }
         }
 
         return binding.root

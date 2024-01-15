@@ -7,7 +7,7 @@ data class Charger(
     val imageUrl: String,
     val pricePerHour: Int,
     val startHour: Int,
-    val type: String,
+    val speed : Int,
     val latitude: Double,
     val longitude: Double,
     val title: String

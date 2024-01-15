@@ -1,13 +1,11 @@
 package com.example.modueleccar.ui.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.modueleccar.common.convertTimeString
 import com.example.modueleccar.data.Charger
 import com.example.modueleccar.data.ChargerList
-import com.example.modueleccar.databinding.ItemInfoPurchaseBinding
 import com.example.modueleccar.databinding.RvItemInfoPurchaseBinding
 
 class ChargerAdapter(
@@ -22,10 +20,11 @@ class ChargerAdapter(
                 root.setOnClickListener {
                     navigationCallback(charger.chargerInfoId, charger.distance)
                 }
+                tvElecAmount.text = "${charger.speed.toString()}kW"
                 tvStationTitle.text = charger.title
                 tvAvailableTime.text = convertTimeString(charger.startHour, charger.endHour)
-                tvDistance.text = "여기서 ${charger.distance}km"
-                tvPerHourPrice.text = "${charger.pricePerHour}원/kwh"
+                tvDistance.text = "내 위치에서 " + String.format("%.1f", charger.distance) + "km"
+                tvPerHourPrice.text = "${charger.pricePerHour / charger.speed}원/kwh"
 
             }
 

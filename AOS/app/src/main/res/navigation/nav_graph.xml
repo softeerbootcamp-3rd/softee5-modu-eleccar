@@ -6,9 +6,9 @@
     app:startDestination="@id/purchaseOverviewFragment">
     <fragment
         android:id="@+id/purchaseOverviewFragment"
-        android:name="com.example.modueleccar.ui.PurchaseOverviewFragment"
+        android:name="com.example.modueleccar.ui.HomeFragment"
         android:label="fragment_purchase_overview"
-        tools:layout="@layout/fragment_purchase_overview">
+        tools:layout="@layout/fragment_home">
         <argument
             android:name="chargerDetail"
             app:argType="com.example.modueleccar.data.ChargerDetail" />
@@ -18,11 +18,16 @@
         <action
             android:id="@+id/action_purchaseOverviewFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
-
+        <action
+            android:id="@+id/action_purchaseOverviewFragment_to_acceptRequestFragment"
+            app:destination="@id/acceptRequestFragment" />
+        <action
+            android:id="@+id/action_purchaseOverviewFragment_to_receiveRequestFragment"
+            app:destination="@id/receiveRequestFragment" />
     </fragment>
     <fragment
         android:id="@+id/chooseTimeFragment"
-        android:name="com.example.modueleccar.ui.ChooseTimeFragment"
+        android:name="com.example.modueleccar.ui.purchase.ChooseTimeFragment"
         android:label="fragment_choose_time"
         tools:layout="@layout/fragment_choose_time">
         <action
@@ -31,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/receiveRequestFragment"
-        android:name="com.example.modueleccar.ui.ReceiveRequestFragment"
+        android:name="com.example.modueleccar.ui.purchase.ReceiveRequestFragment"
         android:label="fragment_receive_request"
         tools:layout="@layout/fragment_receive_request">
         <action
@@ -40,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/sendRequestFragment"
-        android:name="com.example.modueleccar.ui.SendRequestFragment"
+        android:name="com.example.modueleccar.ui.purchase.SendRequestFragment"
         android:label="fragment_send_request"
         tools:layout="@layout/fragment_send_request">
         <action
@@ -49,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/stationDetailInfoFragment"
-        android:name="com.example.modueleccar.ui.StationDetailInfoFragment"
+        android:name="com.example.modueleccar.ui.purchase.StationDetailInfoFragment"
         android:label="fragment_station_detail_info"
         tools:layout="@layout/fragment_station_detail_info">
         <argument android:name="chargerDetail" />
@@ -59,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"
-        android:name="com.example.modueleccar.ui.PaymentFragment"
+        android:name="com.example.modueleccar.ui.purchase.PaymentFragment"
         android:label="fragment_payment"
         tools:layout="@layout/fragment_payment">
         <action
@@ -68,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/completePaymentFragment"
-        android:name="com.example.modueleccar.ui.CompletePaymentFragment"
+        android:name="com.example.modueleccar.ui.purchase.CompletePaymentFragment"
         android:label="CompletePaymentFragment">
         <action
             android:id="@+id/action_completePaymentFragment_to_useDescriptionFragment"
@@ -76,12 +81,12 @@
     </fragment>
     <fragment
         android:id="@+id/useDescriptionFragment"
-        android:name="com.example.modueleccar.ui.UseDescriptionFragment"
+        android:name="com.example.modueleccar.ui.purchase.UseDescriptionFragment"
         android:label="fragment_use_description"
         tools:layout="@layout/fragment_use_description" />
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.modueleccar.ui.RegisterFragment"
+        android:name="com.example.modueleccar.ui.sell.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register">
         <action
@@ -90,7 +95,7 @@
     </fragment>
     <fragment
         android:id="@+id/conditionCheckFragment"
-        android:name="com.example.modueleccar.ui.ConditionCheckFragment"
+        android:name="com.example.modueleccar.ui.sell.ConditionCheckFragment"
         android:label="fragment_condition_check"
         tools:layout="@layout/fragment_condition_check">
         <action
@@ -99,7 +104,27 @@
     </fragment>
     <fragment
         android:id="@+id/registerLocationFragment"
-        android:name="com.example.modueleccar.ui.RegisterLocationFragment"
+        android:name="com.example.modueleccar.ui.sell.RegisterLocationFragment"
         android:label="fragment_register_location"
-        tools:layout="@layout/fragment_register_location" />
+        tools:layout="@layout/fragment_register_location" >
+        <action
+            android:id="@+id/action_registerLocationFragment_to_registerDetailFragment"
+            app:destination="@id/registerDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/acceptRequestFragment"
+        android:name="com.example.modueleccar.ui.purchase.AcceptRequestFragment"
+        android:label="fragment_accept_request"
+
+        tools:layout="@layout/fragment_accept_request">
+        <action
+            android:id="@+id/action_acceptRequestFragment_to_purchaseOverviewFragment"
+            app:destination="@id/purchaseOverviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerDetailFragment"
+        android:name="com.example.modueleccar.ui.sell.RegisterDetailFragment"
+        android:label="fragment_register_detail"
+        tools:layout="@layout/fragment_register_detail" />
 </navigation>

@@ -39,8 +39,8 @@ fun Context.dialogResize(dialog: Dialog, width: Float, height: Float){
 }
 
 fun convertTimeString(startTime : Int, endTime: Int): String{
-    val startString = String.format("$02d", startTime)
-    val endString = String.format("$02d", endTime)
-    return "${startTime}:00 - ${endTime}:00"
+    val startString = String.format("%02d", startTime)
+    val endString = String.format("%02d", endTime)
+    return "${startString}:00 - ${endString}:00"
 }
 

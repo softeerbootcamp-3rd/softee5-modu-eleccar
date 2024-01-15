@@ -1,5 +1,6 @@
-package com.example.modueleccar.ui
+package com.example.modueleccar.ui.purchase
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -33,22 +34,24 @@ class ChooseTimeFragment : Fragment() {
 
         binding.btnApplyReserve.setOnClickListener {
             viewModel.reservationTimeState.value?.let { value ->
-                ConfirmRequestDialog(
-                ) {
+                ConfirmRequestDialog()
+                 {
                     findNavController().navigate(R.id.action_chooseTimeFragment_to_sendRequestFragment)
                 }.show(childFragmentManager, null)
             }
+
         }
         init()
 
         viewModel.chargerState.observe(viewLifecycleOwner) { chargerState ->
+            Log.d("chargerState", chargerState.toString())
             for (i in 0 until chargerState.size) {
                 var maxPossibleTime = 0
-                for (j in i + 1 until chargerState.size) {
-                    if (chargerState[i].available && chargerState[j].available) {
-                        maxPossibleTime += 1
-                    } else if (!chargerState[i].available || !chargerState[j].available) {
-                        break
+                if (chargerState[i].available) {
+                    for (j in i + 1 until chargerState.size) {
+                        if (chargerState[j].available) {
+                            maxPossibleTime += 1
+                        } else break
                     }
                 }
                 maxPossibleTime = min(maxPossibleTime, 6)

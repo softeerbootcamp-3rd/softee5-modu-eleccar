@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/fl_accept_request"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SendRequestFragment">
+    tools:context=".ui.purchase.SendRequestFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -129,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="38dp"
                         android:fontFamily="@font/spoqahansansneomedium"
-                        android:text="12:00 - 18:00, 총 6시간"
+                        android:text=""
                         android:textColor="@color/gray_600"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -155,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="25dp"
                         android:fontFamily="@font/spoqahansansneomedium"
-                        android:text="NNN도 NNN군 NN시 123-56"
+                        android:text=""
                         android:textColor="@color/gray_600"
                         android:textSize="14dp" />
 
@@ -183,7 +184,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="25dp"
                         android:fontFamily="@font/spoqahansansneomedium"
-                        android:text="2520kwh"
+                        android:text=""
                         android:textColor="@color/gray_600"
                         android:textSize="14dp" />
 
@@ -209,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="38dp"
                         android:fontFamily="@font/spoqahansansneomedium"
-                        android:text="8,000원"
+                        android:text=""
                         android:textColor="@color/main_400"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -229,7 +230,7 @@
             android:textColor="@color/gray_000"
             android:textSize="16dp"
             app:backgroundTint="@color/main_400"
-            app:layout_constraintBottom_toTopOf="@id/btn_cancel_rental" />
+            app:layout_constraintBottom_toTopOf="@id/btn_reject" />
 
         <Button
             android:id="@+id/btn_reject"

@@ -1,15 +1,12 @@
-package com.example.modueleccar.ui
+package com.example.modueleccar.ui.purchase
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import com.example.modueleccar.R
 import com.example.modueleccar.common.convertTimeString
 import com.example.modueleccar.data.ChargerDetail
@@ -19,8 +16,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import okhttp3.Dispatcher
 
 
 @AndroidEntryPoint
@@ -49,9 +44,11 @@ class StationDetailInfoFragment : Fragment() {
         }
 
         binding.apply {
-            tvDistance.text = "내 위치에서 ${chargerDetail.distance}km"
+            tvElecAmount.text = "${chargerDetail.speed}kwh"
+            tvStationTitle.text = "${chargerDetail.title}"
+            tvDistance.text = "내 위치에서 " + String.format("%.1f", chargerDetail.distance) + "km"
             tvAdapterType.text = chargerDetail.chargerType
-            tvRentalPrice.text = "${chargerDetail.pricePerHour}원/kwh"
+            tvRentalPrice.text = "${chargerDetail.pricePerHour / chargerDetail.speed}원/kwh"
             tvStationAvailTime.text =
                 convertTimeString(chargerDetail.startHour, chargerDetail.endHour)
             tvInstallType.text = chargerDetail.installType

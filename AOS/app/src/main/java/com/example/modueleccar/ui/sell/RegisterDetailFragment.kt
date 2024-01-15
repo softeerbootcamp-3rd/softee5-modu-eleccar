@@ -1,16 +1,16 @@
-package com.example.modueleccar.ui
+package com.example.modueleccar.ui.sell
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.example.modueleccar.R
-import com.example.modueleccar.databinding.FragmentStationInfoBinding
+import com.example.modueleccar.databinding.FragmentRegisterDetailBinding
 
 
-class StationInfoFragment : Fragment() {
-    private lateinit var _binding: FragmentStationInfoBinding
+class RegisterDetailFragment : Fragment() {
+    private lateinit var _binding : FragmentRegisterDetailBinding
     private val binding
         get() = _binding
     override fun onCreateView(
@@ -18,7 +18,7 @@ class StationInfoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentStationInfoBinding.inflate(inflater, container, false)
+        _binding = FragmentRegisterDetailBinding.inflate(inflater, container, false)
 
         return binding.root
     }
